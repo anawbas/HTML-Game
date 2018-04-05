@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 2% 8%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 128%;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .a1 {
+        display: block;
+        font-weight: bold;
+        font-size: 320%;
+        color : green;
+    }
+
+    .a2 {
+        display: block;
+        font-weight: bold;
+        font-size: 220%;
+        color : orange;
+    }
+
+    .a3 {
+        font-weight: bold;
+        font-size: 120%;
+        color : orange;
+    }
+
+    html, body {margin: 0; height: 100%; overflow: hidden}
+</style>
+<head>
+    <title>Dashboard</title>
+    <meta property="og:title" content="Dashboard Game"/>
+    <meta property="og:description" content="feel the fire"/>
+    <meta property="og:url" content="http://orulab.com/games/dashboard/html/main.html?value="/>
+    <meta property="og:image" itemprop="thumbnailUrl" content="http://orulab.com/games/dashboard/resource/dashboard.png"/>
+    <meta property="og:type" content="website"/>
+    <meta name="viewport" content="user-scalable=no"/>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4966957013340912",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+<body>
+<script>
+    function getUrl() {
+         console.log(window.location.href);
+         var val =  window.location.href;
+         var score = document.getElementById("textbox");
+         score.value = val.substring(val.indexOf('value=')+6)-23;
+         console.log(val.substring(val.indexOf('value=')+6))-23;
+         var style = document.getElementById("textbox").style;
+         style.borderStyle = "none";
+    }
+</script>
+<div id="overHead">
+    <link itemprop="thumbnailUrl" href="https://orulab.com/games/dashboard/resource/whatsapp.png">
+
+    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+      <link itemprop="http://orulab.com/games/dashboard/html/main.html" href="https://orulab.com/games/dashboard/resource/whatsapp.png">
+    </span>
+    <div id="headPart">
+        <p align="center" class="a1">
+            DASHBOARD
+            <br>
+            <br>
+            <button type="button" class="button" onclick="start()">play</button>
+        </p>
+
+        <p align="center" class="a2">
+            OPPONENT SCORE:<input id="textbox" type="number" disabled="disabled" class="a3" style="width: 20%"/>
+            <script>getUrl()</script>
+            <br><br>
+            SCORE:0
+            <a href="whatsapp://send?text=I Challenge you to beat my Score in Dashboard Game! Follow the link below http://orulab.com/games/dashboard/html/main.html?value=23" data-action="share/whatsapp/share"><br/>Challenge via Whatsapp
+                <img src="../resource/whatsapp.png" style="width: 10%;height: 10%;">
+            </a>
+        </p>
+        <br>
+        <p>
+        <h1 align="center">INSTRUCTIONS</h1>
+        <h1 align="center">1) Catch the Orage/Yellow Blocks</h1>
+        <h1 align="center">2) Catch the Shield -- Rectangular Box</h1>
+        <h1 align="center">3) Avoid the Red Blocks</h1>
+        <h1 align="center">4) Don't Lift the Finger</h1>
+        </p>
+    </div>
+</div>
+
+
+<canvas id="ctx" width="0" height="0" style="border:1px solid #000000"/>
+<script src="../js/main.js"></script>
+</body>
+</html>
